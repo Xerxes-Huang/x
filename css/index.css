@@ -10,7 +10,7 @@ body{
     font-family: "Microsoft Yahei", sans-serif;
 }
 .page{
-    background-image: url(https://github.com/Xerxes-Huang/media-resource/blob/main/leaf.jpg);
+    background-image: url(assets/first/leaf.jpg);
     position:relative;background-position: center;
     background-size: cover;
     width:100vw;
