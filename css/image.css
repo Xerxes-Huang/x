@@ -62,7 +62,6 @@ body{
   scroll-behavior: smooth;
   scrollbar-width: none;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 .scroll-h::-webkit-scrollbar {
@@ -110,9 +109,6 @@ body{
   overflow-y: auto;
   scroll-behavior: smooth;
   scrollbar-width: none;
-  display: block;
-  justify-content: center;
-  align-items: center;
   border-radius: 3vw;
 }
 .scroll-v::-webkit-scrollbar {
