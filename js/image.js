@@ -81,3 +81,33 @@ const scrollH = document.querySelector('.scroll-h');
 const scrollV = document.querySelector('.scroll-v');
 initDragScroll(scrollH, true);
 initDragScroll(scrollV, false);
+const scrollH = document.querySelector('.scroll-h');
+const scrollV = document.querySelector('.scroll-v');
+initDragScroll(scrollH, true);
+initDragScroll(scrollV, false);
+const scrollWrap = document.querySelector('.scroll-h');
+const btnPrev = document.querySelector('.btn-prev');
+const btnNext = document.querySelector('.btn-next');
+const pageW = scrollWrap.offsetWidth;
+btnPrev.addEventListener('click', () => {
+  let targetLeft = Math.round(scrollWrap.scrollLeft / pageW) * pageW - pageW;
+  if (targetLeft < 0) {
+    targetLeft = scrollWrap.scrollWidth - pageW;
+  }
+  scrollWrap.scrollTo({
+    left: targetLeft,
+    behavior: 'smooth'
+  });
+});
+
+btnNext.addEventListener('click', () => {
+  let targetLeft = Math.round(scrollWrap.scrollLeft / pageW) * pageW + pageW;
+  const maxLeft = scrollWrap.scrollWidth - pageW;
+  if (targetLeft > maxLeft) {
+    targetLeft = 0;
+  }
+  scrollWrap.scrollTo({
+    left: targetLeft,
+    behavior: 'smooth'
+  });
+});
